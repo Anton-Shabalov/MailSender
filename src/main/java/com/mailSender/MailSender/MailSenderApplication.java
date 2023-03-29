@@ -1,12 +1,11 @@
 package com.mailSender.MailSender;
 
-import com.mailSender.MailSender.DTO.Message;
-import com.mailSender.MailSender.service.DefaultMailSender;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
+@EnableScheduling
 public class MailSenderApplication {
 
 	public static void main(String[] args) {
