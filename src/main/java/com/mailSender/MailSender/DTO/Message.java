@@ -3,10 +3,12 @@ package com.mailSender.MailSender.DTO;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import kotlinx.serialization.Serializable;
 import lombok.*;
 
 @RequiredArgsConstructor
 @Getter
+@Serializable
 public class Message {
     @NotNull(message = "subject is null")
     @Size(min = 5, max = 50, message = "subject wrong size")
