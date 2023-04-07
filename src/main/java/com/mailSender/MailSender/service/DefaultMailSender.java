@@ -1,5 +1,6 @@
 package com.mailSender.MailSender.service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mailSender.MailSender.DTO.Message;
 import com.mailSender.MailSender.service.interfaces.SendEmail;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class DefaultMailSender implements SendEmail {
     @Autowired
-    public JavaMailSender senderMails;
+    private JavaMailSender senderMails;
 
     @Override
     public void sendMail(Message message) {
