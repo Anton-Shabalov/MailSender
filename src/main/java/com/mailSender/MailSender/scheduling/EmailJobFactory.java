@@ -14,7 +14,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.Date;
 @Component
 public class EmailJobFactory {
-    private int countMessage=0;
+
     @Autowired
     private ApplicationContext applicationContext;
     private JobDetail createEmailSendJobDetail(Message message) {
