@@ -20,7 +20,7 @@ import java.io.UnsupportedEncodingException;
 
 @Slf4j
 @Component
-@RabbitListener(queues = "topic.EmailSend")
+@RabbitListener(queues = "topic.mqtt.EmailSend")
 public class MqttDataRabbitHandle {
     @Autowired
     ObjectMapper objectMapper;
