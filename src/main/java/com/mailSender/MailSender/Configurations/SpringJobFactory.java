@@ -23,7 +23,4 @@ public class SpringJobFactory extends SpringBeanJobFactory implements Applicatio
         beanFactory.autowireBean(job);
         return job;
     }
-
-
-
 }

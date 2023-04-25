@@ -6,17 +6,18 @@ import jakarta.validation.constraints.Size;
 import kotlinx.serialization.Serializable;
 import lombok.*;
 
-@RequiredArgsConstructor
-@Getter
+@Data
 @Serializable
-public class Message {
+@NoArgsConstructor
+@AllArgsConstructor
+public class SetApproveRecipeMessageDto {
     @NotNull(message = "subject is null")
     @Size(min = 5, max = 50, message = "subject wrong size")
-    private final String subject;
+    private String subject;
     @NotNull(message = "emailTo is null")
     @Email(message = "emailTo not valid email")
-    private final String emailTo;
+    private String emailTo;
     @NotNull(message = "text is null")
     @Size(min = 20, max = 512, message = "text wrong size")
-    private final String text;
+    private String text;
 }

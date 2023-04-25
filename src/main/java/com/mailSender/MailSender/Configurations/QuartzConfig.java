@@ -32,7 +32,7 @@ public class QuartzConfig {
         schedulerFactoryBean.setApplicationContextSchedulerContextKey("applicationContext");
         schedulerFactoryBean.setJobFactory(springJobFactory());
 
-        schedulerFactoryBean.setSchedulerName("myScheduler");
+        schedulerFactoryBean.setSchedulerName("druScheduler");
         schedulerFactoryBean.setAutoStartup(true);
         schedulerFactoryBean.setQuartzProperties(quartzProperties());
 
