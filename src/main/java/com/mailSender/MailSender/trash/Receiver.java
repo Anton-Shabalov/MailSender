@@ -3,7 +3,6 @@ package com.mailSender.MailSender.trash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.integration.mqtt.core.MqttPahoClientFactory;
 import org.springframework.integration.mqtt.outbound.MqttPahoMessageHandler;
-import org.springframework.jms.annotation.JmsListener;
 import org.springframework.messaging.support.GenericMessage;
 import org.springframework.stereotype.Component;
 
@@ -23,6 +22,6 @@ public class Receiver {
 //    mqttHandler.handleMessage(new GenericMessage<>(message));
 //  }
 
-  @Autowired
-  private MqttPahoClientFactory mqttClientFactory;
+//  @Autowired
+//  private MqttPahoClientFactory mqttClientFactory;
 }
