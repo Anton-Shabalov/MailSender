@@ -1,6 +1,8 @@
 package com.mailSender.MailSender.Configurations;
 
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.integration.annotation.ServiceActivator;
@@ -32,6 +34,15 @@ public class MqttClientConfiguration {
         options.setPassword("guest".toCharArray());
         factory.setConnectionOptions(options);
         return factory;
+    }
+
+        @Bean
+    public Queue createQueueEmailBox() {
+        return new Queue("mailbox");
+    }
+    @Bean
+    public Binding createBindingBetweenQueueAndMqttTopicMailBox() {
+        return new Binding("mailbox", Binding.DestinationType.EXCHANGE, "jms.durable.queues", "mailbox", null);
     }
 
 }
