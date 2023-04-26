@@ -36,13 +36,13 @@ public class MqttClientConfiguration {
         return factory;
     }
 
-        @Bean
-    public Queue createQueueEmailBox() {
-        return new Queue("mailbox");
-    }
-    @Bean
-    public Binding createBindingBetweenQueueAndMqttTopicMailBox() {
-        return new Binding("mailbox", Binding.DestinationType.EXCHANGE, "jms.durable.queues", "mailbox", null);
-    }
+//        @Bean
+//    public Queue createQueueEmailBox() {
+//        return new Queue("mailbox");
+//    }
+//    @Bean
+//    public Binding createBindingBetweenQueueAndMqttTopicMailBox() {
+//        return new Binding("mailbox", Binding.DestinationType.EXCHANGE, "jms.durable.queues", "mailbox", null);
+//    }
 
 }
