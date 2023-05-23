@@ -1,4 +1,15 @@
 spring:
+  application:
+    name: mailServise
+  cloud:
+    consul:
+      discovery:
+        instanceId: ${spring.application.name}
+        register: true
+        register-health-check: false
+        service-name: ${spring.application.name}
+      host: localhost
+      port: 8500
   rabbitmq:
     host: 127.0.0.1
     port: 5672
